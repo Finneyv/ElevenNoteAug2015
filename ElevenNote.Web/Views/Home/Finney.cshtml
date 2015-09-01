@@ -1,0 +1,20 @@
+﻿<h1>Finney</h1>
+
+@{ 
+    var BuzzFizz = new List<String>();
+    var script = "<script>alert('Hello!');</script>";
+    for (int i = 1; i <= 100; i++)
+    {
+        if (i % 3 == 0 && i % 5 == 0) { BuzzFizz.Add("FizzBuzz"); }
+        else if (i % 3 == 0) { BuzzFizz.Add("Fizz"); }
+        else if (i % 5 == 0) { BuzzFizz.Add("Buzz"); }
+        else { BuzzFizz.Add(i.ToString()); }
+    }
+}
+<select>
+    @foreach (var fb in BuzzFizz)
+    {
+        <option value="@fb">@fb</option>
+    }
+</select>
+
